@@ -1,9 +1,8 @@
 from app.models import db
-from app.models import db
 from datetime import datetime, timezone
 
 
-# Association table for M:N (users <-> communities)
+# Association table for M:N (users & communities)
 community_members = db.Table(
     "community_members",
     db.Column("user_id", db.Integer, db.ForeignKey("users.id"), primary_key=True),
